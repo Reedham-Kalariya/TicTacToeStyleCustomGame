@@ -2,7 +2,6 @@
 // Reedham Kalariya Lab 4
 // Arnav Awasthi Lab 4
 //This is our main.cpp file
-#include "TicTacToeGame.h"
 #include "GameBase.h"
 using namespace std;
 
