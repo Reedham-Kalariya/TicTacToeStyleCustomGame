@@ -3,7 +3,6 @@
 // Arnav Awasthi Lab 4
 // This is the .cpp file for the GameBase class. It contains the definitions of all of our member functions
 
-#include "TicTacToeGame.h"
 #include "GomokuGame.h"
 #include <sstream>
 #include <string>
@@ -96,16 +95,7 @@ int GameBase::play() {
  Goal is to take arguments and if it's tic tac toe game, create TTT game object, if Gomoku, return Gomoku
 */
 GameBase* GameBase::check_args(int argc, char* argv[]){
-    //Tic Tac Toe, correct num args
-    if (argc == expected_number_arguments_TTT && (strcmp(argv[fileName],"TicTacToe") == 0)) {
-        GameBase* p = new TicTacToeGame();
-        return p;
-    }
-    //Tic Tac Toe, incorrect number of args
-    if (argc != expected_number_arguments_TTT && (strcmp(argv[fileName], "TicTacToe") == 0)) {
-        //return a null pointer, then in main if it's null pointer, return error
-        return nullptr;
-    }
+    
     //Gomoku, 2 args
     if (argc == expected_number_arguments_TTT && (strcmp(argv[fileName], "Gomoku") == 0)) {
         GameBase* p = new GomokuGame(gomoku_width, gomoku_height, gomoku_wins);
